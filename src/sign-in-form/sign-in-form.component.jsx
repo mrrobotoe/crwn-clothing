@@ -7,7 +7,9 @@ import {
 } from "../utils/firebase/firebase.utils";
 
 import FormInput from "../components/form-input/form-input.component";
-import Button, { BUTTON_TYPE_CLASSES } from "../components/button/button.component";
+import Button, {
+  BUTTON_TYPE_CLASSES,
+} from "../components/button/button.component";
 import "./sign-in-form.styles.scss";
 
 const defaultFormFields = {
@@ -21,19 +23,16 @@ const SignInForm = () => {
 
   const signInWithGoggle = async () => {
     await signInWithGooglePopup();
-  }
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
     try {
-      const { user } = await signInAuthUserWithEmailAndPassword(
-        email,
-        password
-      );
-      setFormFields({defaultFormFields});
+      await signInAuthUserWithEmailAndPassword(email, password);
+      setFormFields({ defaultFormFields });
     } catch (error) {
-      console.log('user sign in failed', error);
+      console.log("user sign in failed", error);
       // if (error.code === "auth/email-already-in-use") {
       //   alert("email already in used, cannot create user");
       // } else {
