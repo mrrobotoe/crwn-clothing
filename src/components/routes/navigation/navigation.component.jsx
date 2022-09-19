@@ -12,6 +12,7 @@ import { CartContext } from "../../../context/cart.context";
 import { NavigationContainer, NavLinks, NavLink, LogoContainer } from "./navigation.styles";
 
 import { signOutUser } from "../../../utils/firebase/firebase.utils";
+import { connectFirestoreEmulator } from "firebase/firestore";
 
 const Navigation = () => {
   const { currentUser } = useContext(UserContext);
