@@ -33,22 +33,23 @@ const SignInForm = () => {
       );
       setFormFields({defaultFormFields});
     } catch (error) {
-      if (error.code === "auth/email-already-in-use") {
-        alert("email already in used, cannot create user");
-      } else {
-        switch (error.code) {
-          case "auth/wrong-password":
-            alert("Incorrect password for email");
-            break;
-          case "auth/user-not-found":
-            alert("Email not found, pleaes create an account");
-            break;
-          default:
-            alert("Oops, something happened. Please try again later");
-            break;
-        }
-        console.log("user creation encountered an error", error);
-      }
+      console.log('user sign in failed', error);
+      // if (error.code === "auth/email-already-in-use") {
+      //   alert("email already in used, cannot create user");
+      // } else {
+      //   switch (error.code) {
+      //     case "auth/wrong-password":
+      //       alert("Incorrect password for email");
+      //       break;
+      //     case "auth/user-not-found":
+      //       alert("Email not found, pleaes create an account");
+      //       break;
+      //     default:
+      //       alert("Oops, something happened. Please try again later");
+      //       break;
+      //   }
+      //   console.log("user creation encountered an error", error);
+      // }
 
       return;
     }
