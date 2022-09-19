@@ -22,8 +22,8 @@ const Navigation = () => {
     await signOutUser();
   }
 
-  console.log(currentUser);
-  
+  console.log('navigation component', currentUser);
+
   return (
     <Fragment>
       <NavigationContainer>

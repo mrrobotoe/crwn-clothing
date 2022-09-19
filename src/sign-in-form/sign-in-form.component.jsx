@@ -31,7 +31,6 @@ const SignInForm = () => {
         email,
         password
       );
-      console.log(user);
       setFormFields({defaultFormFields});
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
