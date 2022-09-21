@@ -1,8 +1,12 @@
 .authentication-container {
-  display: flex;
-  width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+  gap: 50px;
+  max-width: 1200px;
   justify-content: space-between;
-  margin: 30px auto;
+  justify-items: center;
+  margin-top: 30px auto;
+
 
   h2 {
     margin: 10px 0;

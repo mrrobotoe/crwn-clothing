@@ -3,13 +3,13 @@ import { useState } from "react";
 import {
   signInAuthUserWithEmailAndPassword,
   signInWithGooglePopup,
-  createUserDocumentFromAuth,
-} from "../utils/firebase/firebase.utils";
+} from "../../utils/firebase/firebase.utils";
 
-import FormInput from "../components/form-input/form-input.component";
+import FormInput from "../form-input/form-input.component";
 import Button, {
   BUTTON_TYPE_CLASSES,
-} from "../components/button/button.component";
+} from "../button/button.component";
+
 import "./sign-in-form.styles.scss";
 
 const defaultFormFields = {
