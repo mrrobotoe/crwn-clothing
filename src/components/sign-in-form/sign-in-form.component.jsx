@@ -102,7 +102,7 @@ const SignInForm = () => {
             onClick={signInWithGoggle}
             aria-label="sign-in-with-google"
           >
-            Sign In With Google
+            Google Sign In
           </Button>
         </div>
       </form>

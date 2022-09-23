@@ -16,6 +16,7 @@ import {
   NavLinks,
   NavLink,
   LogoContainer,
+  WelcomeUser
 } from "./navigation.styles";
 
 const Navigation = () => {
@@ -33,7 +34,9 @@ const Navigation = () => {
         <LogoContainer to="/">
           <CrwnLogo>Logo</CrwnLogo>
         </LogoContainer>
+
         <NavLinks>
+          {currentUser && <WelcomeUser>Welcome, {currentUser.displayName}</WelcomeUser>}
           <NavLink to="/shop">SHOP</NavLink>
           {currentUser ? (
             <NavLink as="span" onClick={signOutHandler}>

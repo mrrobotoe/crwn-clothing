@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Link } from 'react-router-dom'
 export const NavigationContainer = styled.nav`
   height: 70px;
@@ -27,6 +27,22 @@ export const NavLink = styled(Link)`
   padding: 10px 15px;
   cursor: pointer;
   text-decoration: underline;
+`
+const slideInLeft = keyframes`
+  0% {
+    -webkit-transform: translateX(-50px);
+            transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1;
+  }
+`
+
+export const WelcomeUser = styled.h2`
+  animation: ${slideInLeft} .5s linear;
 `
 
 // .navigation {
